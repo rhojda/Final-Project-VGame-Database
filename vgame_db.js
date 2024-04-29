@@ -9,6 +9,8 @@ const { credentials } = require('./config')
 const indexRouter = require('./routes/index');
 const consolesRouter = require('./routes/consoles');
 const gamesRouter = require('./routes/games');
+const genresRouter = require('./routes/genres');
+const usersRouter = require('./routes/users');
 
 const app = express()
 const port = 3000
@@ -76,6 +78,8 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/consoles', consolesRouter);
 app.use('/games', gamesRouter);
+app.use('/genres', genresRouter);
+app.use('/users', usersRouter);
 
 // custom 404 page
 app.use((req, res) => {

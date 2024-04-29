@@ -29,8 +29,8 @@ router.get('/show/:id', async (req, res, next) => {
         consoleId: req.params.id,
     }
     console.games = await Game.allForConsole(console);
-    if (console.genreId) {
-        templateVars['genre'] = await Genre.get(console.genreId);
+    if (console.gameId) {
+        templateVars['game'] = await Game.get(console.gameId);
     }
     if (req.session.currentUser) {
         templateVars['userConsole'] = await userConsole.get(console, req.session.currentUser);
