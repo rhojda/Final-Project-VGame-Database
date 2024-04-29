@@ -1,0 +1,8 @@
+<h1>Consoles</h1>
+<a href="/consoles/form">Add a new Console</a>
+{{#each consoles}}
+<li>
+    <a href="/consoles/show/{{this.id}}">{{this.id}} - {{this.name}}</a>
+    <a href="/consoles/edit?id={{this.id}}">Edit</a>
+</li>
+{{/each}}

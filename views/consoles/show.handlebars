@@ -1,0 +1,14 @@
+<h1>{{console.name}}</h1>
+{{#if console.games}}
+<p>
+    Developed by {{#each console.games}}{{this.developer}}{{#unless @last}}, {{/unless}}{{/each}}
+</p>
+{{/if}}
+<p>
+    Originally published in {{#each console.games}}{{this.release_date}}{{#unless @last}}, {{/unless}}{{/each}}
+</p>
+{{#if genre}}
+<p>
+    Genre: {{genre.name}}
+</p>
+{{/if}}
